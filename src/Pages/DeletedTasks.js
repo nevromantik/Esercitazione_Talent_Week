@@ -3,27 +3,23 @@ import { AppContext } from "../App";
 import { useContext } from "react";
 import { useEffect } from "react";
 import IncaricoItems from "../Components/IncaricoItems";
-
+import IncaricoLista from "../Components/IncaricoLista";
 function DeletedTasks() {
   const { deletedTasks, setDeletedTasks } = useContext(AppContext);
 
   const handleDeleteAll = () => {
-    setDeletedTasks([]); 
+    setDeletedTasks([]);
   };
 
   return (
     <>
       {deletedTasks.length > 0 ? (
         <>
-          {deletedTasks.map((el) => (
-            <IncaricoItems
-              key={el.id}
-              id={el.id}
-              completed={el.completed}
-              title={el.title}
-              config="show_deleted"
-            />
-          ))}
+          <IncaricoLista
+            tasks={deletedTasks}
+            setTasks={setDeletedTasks}
+            config="delete"
+          />
           <button onClick={handleDeleteAll}>Svuota cestino</button>
         </>
       ) : (

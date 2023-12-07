@@ -2,8 +2,8 @@ import React from "react";
 import IncaricoItems from "./IncaricoItems";
 import styles from '../Styles/IncaricoItems.module.css'
 
-function IncaricoLista({tasks, setTasks}) {
-
+function IncaricoLista({tasks, setTasks, config}) {
+  
   return (
     <div className={styles.list}>
       {tasks?.map((task) => {
@@ -14,10 +14,14 @@ function IncaricoLista({tasks, setTasks}) {
             title={task.title}
             completed={task.completed}
             setTasks={setTasks}
-            config="show_all"
+            config={config}
           />
         );
       })}
+
+      {
+        
+      }
     </div>
   );
 }

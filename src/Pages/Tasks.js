@@ -7,7 +7,7 @@ function Tasks() {
 
   return (
     <>
-      <IncaricoLista tasks={tasks} setTasks={setTasks} />
+      <IncaricoLista tasks={tasks} setTasks={setTasks} config="show_all"/>
     </>
   );
 }
