@@ -1,0 +1,38 @@
+/* Aggiunta di colori alla palette */
+.container {
+    padding: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    border-radius: 10px;
+    
+  }
+  
+  .container > span {
+    margin-right: 1px;
+    border-radius: 5px;
+    border: none;
+    width: 5rem;
+    padding: 1rem;
+    background-color: #73828b; 
+    color: white;
+    transition: background-color 0.3s ease; /* Transizione del colore all'hover */
+  }
+  
+  .container > span:hover {
+    background-color: #2980b9; 
+  }
+  
+  .link {
+    text-decoration: none;
+    outline: none;
+    color: inherit; 
+  }
+  
+  @media only screen and (min-width: 769px) {
+    
+    .container > span {
+      width: 20rem;
+      margin: 0;
+      border-radius: 0;
+    }
+  }

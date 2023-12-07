@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid gray;
+    width: 15rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.list{
+    margin-top: 2rem;
+}
+
+.icons{
+    display: flex;
+    margin-left: 1rem;
+    width: 30%;
+    
+}
+
+.textWrap{
+    width: 60%;
+    text-align: left;
+}
+
+
+@media only screen and (min-width: 769px) {
+    
+    .container  {
+      width: 40rem;
+      margin-bottom: 1;
+      border-radius: 10px;
+    }
+
+    .icons{
+        display: flex;
+        margin-left: 0rem;
+        width: 10%;
+        
+    }
+  }
